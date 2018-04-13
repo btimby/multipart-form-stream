@@ -126,8 +126,7 @@ MultipartStream.prototype._emitStream = function(cb) {
   lines.push('--' + this._boundary);
   lines.push(FILE_CONTENT_DISPOSITION.replace('%s', field).replace('%s', filename));
   lines.push(CONTENT_TYPE.replace('%s', mimeType));
-  lines.push('')
-  lines.push('')
+  lines.push('');
 
   this.emit('data', lines.join(NEWLINE));
 
